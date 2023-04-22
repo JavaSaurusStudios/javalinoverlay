@@ -2,9 +2,9 @@ function connect() {
 
     const _adres = new URL(window.location.toLocaleString());
     const _channel = _adres.searchParams.get('channel');
-    const _enableCommands = _adres.searchParams.has('commands') ? _adres.searchParams.get('commands') == true : false;
+    const _enableCommands = _adres.searchParams.has('commands') ? _adres.searchParams.get('commands') === 'true' : false;
     console.log("Connecting to " + _channel);
-
+    console.log("Commands are enabled = " + _enableCommands);
     let client = new tmi.Client({
         channels: [_channel]
     });
