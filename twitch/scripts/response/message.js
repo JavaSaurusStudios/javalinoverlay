@@ -3,7 +3,7 @@ function EvaluateMessage(tags,message) {
     if (hasProfanity(message)) {
         playProfanityAudio();
     } else if (message.startsWith("!")) {
-        var sound = "./twitch/audio/chat-alert/" + message.replace("!", "") + ".mp3";
+        var sound = "./twitch/audio/" + message.replace("!", "") + ".mp3";
         playChatAudio(sound);
         console.log("Playing " + sound);
     }
